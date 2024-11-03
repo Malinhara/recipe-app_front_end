@@ -8,6 +8,7 @@ function Favcard() {
   const [meals, setMeals] = useState([]);
   const [favorites, setFavorites] = useState({});
   const navigate = useNavigate();
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL; // Use the environment variable
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -23,7 +24,7 @@ function Favcard() {
           },
         };
 
-        const response = await axios.get('http://localhost:3001/item/favmeal/ids', config);
+        const response = await axios.get(`${BACKEND_URL}/item/favmeal/ids`, config);
         const fetchedMeals = response.data.recipes || [];
         setMeals(fetchedMeals);
 
@@ -38,12 +39,11 @@ function Favcard() {
     };
 
     fetchMeals();
-  }, []);
+  }, [BACKEND_URL]); // Add BACKEND_URL to dependencies if it changes (e.g., in testing)
 
   const handleCardClick = (recipe) => {
     navigate(`/itemdesc/${recipe.idMeal}`);
   };
-
 
   const toggleFavorite = (recipe) => {
     const isCurrentlyFavorited = favorites[recipe.idMeal] || false;
