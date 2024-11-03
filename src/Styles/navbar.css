@@ -1,0 +1,61 @@
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+  }
+  
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+ 
+  .navbar-brand {
+    margin-left:5%; 
+  }
+  
+  .main-logo-img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    style:none;
+  }
+  
+  .nav-links a { 
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: none; 
+  }
+  
+  .right-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 5%; 
+  }
+
+  .secondary-logo {
+    max-width: 20px;
+    height: auto;
+  }
+  
+
+  .plain-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.plain-button:hover{
+
+  background:none;
+}

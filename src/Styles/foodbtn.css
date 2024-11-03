@@ -1,0 +1,31 @@
+.container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: left;
+}
+
+.button-row {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: left; 
+    gap: 1rem; 
+}
+
+button {
+    width: 120px; 
+    height: 50px; 
+    border-radius: 999px; 
+    font-size: 1rem;
+    transition: background-color 0.3s; 
+    cursor: pointer; 
+    background-color: white;
+    color: #ff839c; 
+    border: 2px solid #ff839c; 
+}
+
+
+button:hover {
+    background-color: #fe5e7f;
+    color: white; 
+}
+
