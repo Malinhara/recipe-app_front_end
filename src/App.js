@@ -16,7 +16,7 @@ function AppContent() {
   return (
     <div style={{ backgroundColor: 'white' }}>
       {showNavbar && <NavigationBar />}
-      <h1>hai<h1/>
+      <p>poorna</p>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
